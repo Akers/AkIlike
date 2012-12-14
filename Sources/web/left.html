@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+
+<head>
+	<title>Destroydrop &raquo; Javascripts &raquo; Tree</title>
+
+	<link rel="StyleSheet" href="css/dtree.css" type="text/css" />
+	<script type="text/javascript" src="css/dtree.js"></script>
+
+</head>
+
+<body>
+
+
+
+<div class="dtree">
+
+	<p><a href="javascript: d.openAll();">open all</a> | <a href="javascript: d.closeAll();">close all</a></p>
+
+	<script type="text/javascript">
+
+		d = new dTree('d');
+	//根节点a0
+		d.add(00,-1,'ILIKE内部信息管理系统');//00
+	//根子节点a1(a1表示1层)		
+
+		d.add(03,00,'财务管理');//03		
+		
+	
+		
+		//子节点a2
+		d.add(0301,03,'账户管理');//01--04			
+		d.add(0302,03,'收支明细');//01--01
+		d.add(0303,03,'查询统计');//01--01
+
+		d.add(030101,0301,'银行账户管理','bankaccounts','','main');		
+		d.add(030102,0301,'账户明细管理','assline','','main');				
+		
+		d.add(030201,0302,'客户订单金额管理','myilike/fms/incomeandexpend/orderAmount_m.html','','main');//1--11--112	
+		d.add(030202,0302,'其他收支明细管理','myilike/fms/incomeandexpend/otherAmountDetail_m.html','','main');//1--11--112
+
+		d.add(030302,0303,'客户账户统计','myilike/fms/stat/customerAccountStat_br.html','','main');//1--11--112	
+		d.add(030302,0303,'公司开销统计','myilike/fms/stat/companyExpensesStat.html','','main');//1--11--112
+		d.add(030303,0303,'公司总账统计','myilike/fms/stat/companyTotalAccountStat_br.htm','','main');//1--11--112	
+
+		d.add(030301,0303,'利润统计');//01--01
+		d.add(03030101,030301,'订单利润统计','myilike/fms/stat/profit/orderProfitStat.html','','main');//1--11--112			
+		d.add(03030103,030301,'客户利润统计','myilike/fms/stat/profit/customerProfitStat.html','','main');//1--11--112	
+		d.add(03030104,030301,'供应商利润统计','myilike/fms/stat/profit/supplierProfitStat.html','','main');//1--11--112
+		
+		d.add(03030105,030301,'纯利润统计','myilike/fms/stat/profit/netProfitStat.html','','main');//1--11--112			
+	
+		document.write(d);
+
+	</script>
+
+</div>
+
+
+</body>
+
+</html>

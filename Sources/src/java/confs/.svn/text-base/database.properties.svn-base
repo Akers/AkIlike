@@ -1,0 +1,11 @@
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+#dbType: DATABASE_TYPE_MYSQL=mysql DATABASE_TYPE_SQL=sql DATABADE_TYPE_ODBC=odbc
+charset = utf8
+dbType = mysql
+driver = com.mysql.jdbc.Driver
+dbURL = localhost
+dbPort = 3306
+dbName = db_ilike
+dbUserName = ilikeuser
+dbPassword = ilikeuser

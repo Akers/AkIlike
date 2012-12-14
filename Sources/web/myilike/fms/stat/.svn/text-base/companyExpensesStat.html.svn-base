@@ -1,0 +1,86 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<title>公司开销统计</title>
+<link href="../../../css/styleform.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/stylemain.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/styletable.css" rel="stylesheet" type="text/css">
+<link href="../../../css/styletext.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="../../../js/My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body topmargin="0">
+
+<div align=center> 
+  <p class="textTitle">公司开销统计</p> 
+<table width="80%"  border="0" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="100%" >
+	<div align="center" >      
+      <form id="form3" name="form3" method="post" action="orderAmountServlet?action=display" >        
+        <p align="right" class="text">
+              <label></label>
+              日期:从 
+              <input class="wdate" type="text" onClick="WdatePicker()" name="beginDate" value="2011-01-01"/>
+           至
+           <input class="wdate" type="text" onClick="WdatePicker()" name="endDate" value="2011-09-01"/>
+           <input type="submit" name="Submit52" value="  查  询   " class="buttonCom" />
+      </form>
+        </div>	      
+	  </td>
+  </tr>
+   <tr>
+      <td> <div align="right">公司开销总款为： <span class="textStress"> 1,000</span> 
+        </div></td>
+    </tr>
+  <tr valign="top">
+    <td  valign="top">
+     <form  method="post" action="">
+    <table width="99%" height="98"  border="0" cellpadding="0" cellspacing="0"> 
+       
+      	<tr>
+        <td  colspan="4" valign="top">
+      
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"  style="border-collapse: collapse">
+                  <tr> 
+                    <th width="3%" height="30"valign="middle"  bgcolor="#eeeeee" class="th_brCom"><p>序号</p></th>
+                    <th width="7%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">日期</th>
+                    <th  width="4%" valign="middle" bgcolor="#eeeeee" class="th_brCom"> 
+                      <div align="center" >凭证号</div></th>
+                    <th width="5%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">金额</th>
+                    <th width="6%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">摘要</th>
+                  </tr>
+                  <tr > 
+                    <td height="30" valign="middle"  class="td_brCom"><div align="center">1</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">2011-04-01</div></td>
+                    <td valign="middle"  class="td_brCom"> <div align="center" >ZP000001 
+                      </div></td>
+                    <td valign="middle"  class="td_brCom"><div align="right">1,000 
+                      </div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">公司聚餐 
+                      </div></td>
+                  </tr>                 
+                </table>
+		</td>
+      </tr>
+	   </table>
+        </form>
+		</td>
+        
+      </tr>
+    
+	
+<tr> 
+<td class="left_text" align="right"  >
+	<input id="condition" type="hidden" value="beginDate=0000-00-00&endDate=2011-09-16"/>共有<font color="red" id="total">1</font>页记录&nbsp;&nbsp;当前<font color="red" id="current">1</font>页&nbsp;&nbsp;<a href="javascript:goFirst()">首页</a>&nbsp;&nbsp;<a href="javascript:previous()">上一页</a> | <a  href="javascript:next()">下一页</a>&nbsp;&nbsp;<a href="javascript:goLast()">尾页</a>&nbsp;&nbsp;<select onchange="goPage(this)"><option selected value="1">第1页</option></select>
+</td> 
+</tr>
+    </table>
+
+   
+</div>
+</body>
+</html>
+

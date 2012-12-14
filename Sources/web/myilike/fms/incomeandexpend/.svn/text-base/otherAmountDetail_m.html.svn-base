@@ -1,0 +1,104 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<title>其他收支明细管理</title>
+<link href="../../../css/styleform.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/stylemain.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/styletable.css" rel="stylesheet" type="text/css">
+<link href="../../../css/styletext.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="../../../js/My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body topmargin="0">
+
+<div align=center> 
+  <p class="textTitle">其他收支明细管理</p> 
+<table width="98%"  border="0" cellpadding="0" cellspacing="0" >
+
+ <tr>
+    <td width="100%" >
+	<div align="center" >      
+      <form id="form3" name="form3" method="post" action="" >        
+        <p align="right" class="text">        
+             日期: 
+              <input class="wdate" type="text" onClick="WdatePicker()" name="beginDate" value="2011-01-01"/>
+           至
+           <input class="wdate" type="text" onClick="WdatePicker()" name="endDate" value="2011-09-01"/>
+           <input type="submit" name="Submit52" value="  查  询   " class="buttonCom" />
+      </form>
+        </div>	      
+	  </td>
+  </tr>
+  <tr valign="top">
+    <td  valign="top">
+     <form  method="post" action="">
+    <table width="100%" height="98"  border="0" cellpadding="0" cellspacing="0"> 
+       
+      	<tr>
+        <td  colspan="4" valign="top">
+      
+		<table width="100%" border="0" align="center" cellpadding="5" cellspacing="0"  style="border-collapse: collapse">
+                  <tr> 
+                    <th width="5%"valign="middle"  bgcolor="#eeeeee" class="th_brCom"><p>序号</p></th>
+                    <th width="10%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">日期</th>
+                    <th width="10%"valign="middle"  bgcolor="#eeeeee" class="th_brCom"><div align="center">账户流水线</div></th>
+                     <th width="10%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">凭证号</th>                  
+                    <th  width="10%" height="30" valign="middle" bgcolor="#eeeeee" class="th_brCom"> 
+                      <div align="center" >金额</div></th>                
+                    <th width="10%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">交易类型</th>
+                           <th width="10%"valign="middle"  bgcolor="#eeeeee" class="th_brCom"><div align="center">经办人</div></th>   
+                    <th width="15%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">备注</th>
+                    <th width="15%" height="30" valign="middle"   bgcolor="#eeeeee" class="th_brCom"><div align="center" >操作</div></th>
+                    
+                    
+               
+                  </tr>                               
+                  <tr > 
+                    <td valign="middle"  class="td_brCom"><div align="center">1</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">2011-04-01</div></td>
+                      <td valign="middle"  class="td_brCom"><div align="center">100083284323</div></td>
+                     <td valign="middle"  class="td_brCom"><div align="right">
+                    ZP000001
+                    </div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">1,000
+                    	
+                    	</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">现金</td>           
+                  
+                    <td valign="middle"  class="td_brCom">员工4                 
+                    </td>
+                     <td valign="middle"  class="td_brCom"> 公司聚餐
+                    </td>
+             		<td valign="middle"  class="td_brCom">
+                   <font color="#000000">
+                    <a href="otherAmountDetail_edit.html">修 改</a>
+                    <a href="#">删 除</a>
+                                  
+                   </font></td>
+                  </td>
+                  </tr>
+                </table>
+		</td>
+      </tr>
+       <tr height="15">
+      <td height="5" align="right"><br/><a href="otherAmountDetail_add.html">添加凭证明细</a></td>
+   	 </tr>
+	   </table>
+        </form>
+		</td>
+        
+      </tr>
+   
+<tr> 
+<td class="left_text" align="right"  >
+	<input id="condition" type="hidden" value="beginDate=0000-00-00&endDate=2011-09-16"/>共有<font color="red" id="total">1</font>页记录&nbsp;&nbsp;当前<font color="red" id="current">1</font>页&nbsp;&nbsp;<a href="javascript:goFirst()">首页</a>&nbsp;&nbsp;<a href="javascript:previous()">上一页</a> | <a  href="javascript:next()">下一页</a>&nbsp;&nbsp;<a href="javascript:goLast()">尾页</a>&nbsp;&nbsp;<select onchange="goPage(this)"><option selected value="1">第1页</option></select>
+</td> 
+</tr>
+    </table>
+
+   
+</div>
+</body>
+</html>
+

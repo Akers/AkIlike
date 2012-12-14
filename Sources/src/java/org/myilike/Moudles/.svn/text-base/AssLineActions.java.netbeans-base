@@ -1,0 +1,141 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package org.myilike.Moudles;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.myilike.Adapters.DB.DBAdapter;
+import org.myilike.Beans.AssLine;
+import org.myilike.Beans.Remark;
+import org.myilike.Moudles.DB.DataBase;
+
+/**
+ * 
+ * @author Akers
+ */
+public class AssLineActions 
+{
+    private DataBase db;
+    
+    public AssLineActions()
+    {
+        db = DBAdapter.getDB();
+    }
+    
+    /**
+     * 根据bankAccountID获取帐号资金流数据对象
+     * @author Akers
+     * @param bankAccountID
+     * @return AssLine
+     */
+    public AssLine getAssLine(int bankAccountID)
+    {
+        AssLine al = new AssLine();
+        String sql = "SELECT b.*,ba.`bankAccountName`,ba.`bankAccount` FROM bankaccountassline_tb as b join bankaccount_tb as ba on b.bankAccountID=ba.bankAccountID where ba.bankAccountID="+bankAccountID;
+        ResultSet rs = db.query(sql);
+        try
+        {
+            if(rs.next())
+            {
+                al.setAmount(rs.getDouble("bankAccountID"));
+                al.setBankAccountAssLIneDate(rs.getString("bankAccountAssLIneDate"));
+                al.setBankAccountAssLineID(rs.getInt("bankAccountAssLineID"));
+                al.setBankAccountAssLineNum(rs.getString("bankAccountAssLineNum"));
+                
+                //设置remark
+                Remark r = new Remark();
+                r.setUnFormatString(rs.getString("bankAccountAssLineRemark"));
+                r.formatRemark("n,t");
+                al.setBankAccountAssLineRemark(r);
+                
+                al.setBankAccountID(rs.getInt("ankAccountID"));
+                al.setBankAccountName(rs.getString("bankAccountName"));
+                al.setBankAccount(rs.getString("bankAccount"));
+                al.setCustomerID(rs.getInt("customerID"));
+                al.setCustomerName(rs.getString("customerName"));
+                al.setIsAccounted(rs.getBoolean("isAccounted"));
+                al.setIsTransactionType(rs.getBoolean("isTransactionType"));
+                al.setSupplierID(rs.getInt("supplierID"));
+                al.setSupplierName(rs.getString("supplierName"));
+            }
+        }
+        catch (SQLException ex)
+        {
+            Logger.getLogger(AssLineActions.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return al;
+    }
+    
+    /**
+     * 取得资金链记录中最老的时间记录，不传入参数或者传入小于0的参数则返回所有记录中最老的时间，否则，返回bankAccountID对应的记录中最老的记录时间
+     * @author Akers
+     * @return 
+     */
+    public String getOldestDate(){return this.getOldestDate(-1);}
+    public String getOldestDate(int bankAccountID)
+    {
+        ResultSet rs;
+        String rst = "";
+        try
+        {   
+            String sql = "SELECT MIN(bankAccountAssLineDate) FROM bankAccountAssLine_tb "+ (bankAccountID >= 0 ? "WHERE bankAccountID="+bankAccountID : "");
+            //取得最新日期：
+            rs = db.query(sql);
+            if(rs.next())
+                rst = rs.getString(1);
+            else
+                rst = "2000-01-01";
+
+        }
+        catch (SQLException ex)
+        {
+            Logger.getLogger(AssLineActions.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return rst;
+    }
+    
+    /**
+     * 取得资金链记录中最新的时间记录，不传入参数或者传入小于0的参数则返回所有记录中最新的时间，否则，返回bankAccountID对应的记录中最新的记录时间
+     * @author Akers
+     * @return 
+     */
+    public String getNewestDate(){return this.getOldestDate(-1);}
+    public String getNewestDate(int bankAccountID)
+    {
+        ResultSet rs;
+        String rst = "";
+        try
+        {   
+            String sql = "SELECT MAX(bankAccountAssLineDate) FROM bankAccountAssLine_tb "+ (bankAccountID >= 0 ? "WHERE bankAccountID="+bankAccountID : "");
+            SimpleDateFormat dateFormater = new SimpleDateFormat("yyyy-mm-dd");
+            //取得最新日期：
+            rs = db.query(sql);
+            if(rs.next())
+                rst = rs.getString(1);
+            else
+                rst = dateFormater.format(new Date());
+
+        }
+        catch (SQLException ex)
+        {
+            Logger.getLogger(AssLineActions.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return rst;
+    }
+    
+    
+    //析构
+    @Override
+    protected void finalize() throws Throwable
+    {
+        super.finalize();
+        this.clone();
+        System.gc();
+    }
+}

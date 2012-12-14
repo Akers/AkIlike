@@ -1,0 +1,118 @@
+﻿<html>
+<head>
+<title>修改收支明细</title>
+<link href="../../../css/styleform.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/stylemain.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/styletable.css" rel="stylesheet" type="text/css">
+<link href="../../../css/styletext.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="../../../js/My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body topmargin="20">
+
+<div align=center class="text">   
+<table width="600" height="369"  border="0" cellpadding="0" cellspacing="0" >
+
+  <tr>
+    <td width="100%" >
+	<div align="center" >
+          <p class="textTitle">修改收支明细</p> 
+        </div>	 
+     <hr color="#6FB7B7">	  </td>
+  </tr>
+  
+  <tr>
+    <td height="345"  valign="top">
+<form name="form1" method="post" action="">
+          <table width="500"  border="0" cellpadding="2" cellspacing="0" bordercolor="#CCCCCC"> 
+          <input name="orderID" id="orderID" type="hidden" value="1">
+          <input name="certificateID" id="certificateID" type="hidden" value="S010">
+             <tr>
+          <td class="text"><div align="center" class="text">
+            <div align="right">日期:</div>
+          </div></td>
+          <td colspan="4" >
+            <input class="Wdate" type="text" onClick="WdatePicker()" name="certificateDate" value="2011-03-27"/></td></td>
+          </tr>
+              <tr> 
+              <td height="32" class="text"><div align="right">账户流水线:</div></td>
+              <td><label> 
+                <font color="blue" size="4">
+                     <select name="bankAccountAssLineID"  >     
+              <option value="1">2011-03-01|1222222222|1000000  </option>
+		<option value="2" selected>2011-03-26|100083284283|2000  </option>
+		<option value="3">2011-03-30|100083284284|97800  </option>
+		<option value="4">2011-04-08|100083284323|4000  </option>            
+   </select>
+
+                </font>
+                </label></td>
+            </tr> 
+            
+              <tr> 
+              <td height="32" class="text"><div align="right">交易类型:</div></td>
+              <td><label> 
+                <font color="blue" size="4">
+                  <select name="isTransactionType" class="list">
+                   <option value="0" selected >现金</option>
+                  <option value="1" >转账</option>
+                </select>
+                </font>
+                </label></td>
+            </tr>  
+                     
+               <tr> 
+              <td height="32" class="text"><div align="right">金额:</div></td>
+              <td><label> 
+                <font color="blue" size="4"><input name="amount" id="amount" type="text" value=200 size="45"  onblur="return amountCheck()"></font>
+                </label></td>
+            </tr>
+            </tr>
+            
+              <tr> 
+              <td height="32" class="text"><div align="right">凭证号:</div></td>
+              <td><label> 
+                <font color="blue" size="4"><input name="certificateNo" type="text"  size="45" value="S010"></font>
+                </label></td>
+            </tr>
+            </tr>
+           
+		  <tr>
+         <td class="text"><div align="right" class="text">经手人:</div></td>
+          <td colspan="11" ><label>
+            <select name="employeeID" class="list">           		
+     	<option value="1" selected >员工1</option>
+	<option value="2" >员工2</option>
+	<option value="4" >员工3</option>
+</select>
+
+              </select>
+          </label></td>
+		  </tr>
+              <tr> 
+              <td  class="text"><div align="right">备注:</div></td>
+              <td><label> 
+                <font color="blue" size="4"><textArea name="certificateRemark" size="4" cols="45" >定金</textArea></font>
+                </label></td>
+            </tr>
+            </tr>
+            
+            <tr> 
+              <td height="61" colspan="2"><label> <div align="center"> 
+                  <input name="Submit" type="submit" class="buttonCom" value="  保  存  ">
+              <a href="orderAmountDetail_m.html" class="buttonCom">  返    回   </a>
+                 </div></label>
+                <label></label></td>
+            </tr>
+          </table>
+</form>	  </td>
+    </tr>
+
+  </table>
+
+   
+
+<blockquote>&nbsp;</blockquote>
+</div>
+</body>
+</html>

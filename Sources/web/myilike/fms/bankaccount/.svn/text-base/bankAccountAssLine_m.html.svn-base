@@ -1,0 +1,205 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+
+<title>账户明细管理</title>
+
+<link href="../../../css/styleform.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/stylemain.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/styletable.css" rel="stylesheet" type="text/css">
+<link href="../../../css/styletext.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="../../../js/My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body topmargin="0">
+
+<div align=center> 
+  <p class="textTitle">账户明细管理</p> 
+<table width="98%"  border="0" cellpadding="0" cellspacing="0" >
+<tr>
+    <td width="100%" >
+	<div align="center" >      
+      <form id="form3" name="form3" method="post" action="" >        
+        <p align="right" class="text">
+         
+             日期:从 
+              <input class="wdate" type="text" onClick="WdatePicker()" name="beginDate" value="0000-00-00"/>
+           至
+           <input class="wdate" type="text" onClick="WdatePicker()" name="endDate" value="2011-09-18"/>
+            <label>账号：</label>
+          <select name="bankAccountID">
+                <option value="0" selected>全部</option>          
+                <option value="1">62226007100080032008|BOSS1 </option>
+				  <option value="2" >62226007100080032008D|BOSS2 </option>				
+				  	  <option value="3" >  622260071000800328123|员工1 </option>
+              </select>
+           <input type="submit" name="Submit52" value="  查  询   " class="buttonCom" />
+      </form>
+        </div>	      
+	  </td>
+  </tr> 
+  <tr valign="top">
+    <td  valign="top">
+     <form  method="post" action="">
+    <table width="100%" height="98"  border="0" cellpadding="0" cellspacing="0"> 
+        <tr height="5">
+      <td height="5" align="right"><a href="bankAccountAssLine_add.html">添加账户明细</a></td>
+   	 </tr>
+      	<tr>
+        <td  colspan="4" valign="top">
+      
+		<table width="100%" border="0" align="center" cellpadding="5" cellspacing="0"  style="border-collapse: collapse">
+                  <tr> 
+                    <th width="3%"valign="middle"  bgcolor="#eeeeee" class="th_brCom"><p>序号</p></th>
+                    <th width="7%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">日期</th>
+                     <th width="5%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">户名</th>
+                    <th width="10%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">账号</th>
+                    <th width="10%"valign="middle"  bgcolor="#eeeeee" class="th_brCom"><div align="center">账户流水线</div></th>
+                    <th  width="5%" height="30" valign="middle" bgcolor="#eeeeee" class="th_brCom"> 
+                      <div align="center" >入账金额</div></th>
+                    <th width="5%"valign="middle"  bgcolor="#eeeeee" class="th_brCom"><div align="center">支出金额</div></th>
+                    <th width="5%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">交易类型</th>
+                   
+                    <th width="15%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">备注</th>
+                    <th width="15%" height="30" valign="middle"   bgcolor="#eeeeee" class="th_brCom"><div align="center" >操作</div></th>
+                  </tr>              
+                  <tr > 
+                    <td valign="middle"  class="td_brCom"><div align="center">1</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">2011-03-01</div></td>
+                     <td valign="middle"  class="td_brCom"><div align="right">
+                    BOSS1
+                    </div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">62226007100080032008</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">1222222222</div></td>
+                   <td valign="middle"  class="td_brCom"><div align="center">
+                  100000
+                   </td>
+                    <td valign="middle"  class="td_brCom"><div align="center">
+                    
+              </td>
+                     <td valign="middle"  class="td_brCom"><div align="center">转账</td>               
+                   
+                    <td valign="middle"  class="td_brCom"> 3月支付总费用
+                    <font color="blue" >客户1
+                </font>
+                    </td>
+             		<td valign="middle"  class="td_brCom">
+                   <font color="#000000">
+                    <a href="bankAccountAssLine_edit.html">修 改</a>
+                    <a href="#">删 除</a> 
+                                    【<a href="bankAccountAssLineDetail_m.html">明细管理</a>】
+                   </font></td>
+                  </td>
+                  </tr>     
+				     
+				    <tr > 
+                    <td valign="middle"  class="td_brCom"><div align="center">2</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">2011-03-26</div></td>
+                     <td valign="middle"  class="td_brCom"><div align="right">
+                    BOSS1
+                    </div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">62226007100080032008</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">100083284283</div></td>
+                   <td valign="middle"  class="td_brCom"><div align="center">
+             
+                   </td>
+                    <td valign="middle"  class="td_brCom"><div align="center">
+                        2000
+              </td>
+                     <td valign="middle"  class="td_brCom"><div align="center">转账</td>               
+                   
+                    <td valign="middle"  class="td_brCom">订单支付
+                    <font color="blue" >供应商1
+                </font>
+                    </td>
+             		<td valign="middle"  class="td_brCom">
+                   <font color="#000000">
+                    <a href="bankAccountAssLine_edit.html">修 改</a>
+                    <a href="#">删 除</a> 
+                                    【<a href="bankAccountAssLineDetail_m.html">明细管理</a>】
+                   </font></td>
+                  </td>
+                  </tr>      
+				  
+				      
+				    <tr > 
+                    <td valign="middle"  class="td_brCom"><div align="center">3</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">2011-03-30</div></td>
+                     <td valign="middle"  class="td_brCom"><div align="right">
+                   员工1
+                    </div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">622260071000800328123</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">100083284284</div></td>
+                   <td valign="middle"  class="td_brCom"><div align="center">
+             
+                   </td>
+                    <td valign="middle"  class="td_brCom"><div align="center">
+               10000
+              </td>
+                     <td valign="middle"  class="td_brCom"><div align="center">现金</td>               
+                   
+                    <td valign="middle"  class="td_brCom">订单支付
+                    <font color="blue" >供应商1
+                </font>
+                    </td>
+             		<td valign="middle"  class="td_brCom">
+                   <font color="#000000">
+                    <a href="bankAccountAssLine_edit.html">修 改</a>
+                    <a href="#">删 除</a> 
+                                    【<a href="bankAccountAssLineDetail_m.html">明细管理</a>】
+                   </font></td>
+                  </td>
+                  </tr>       
+				  
+				    <tr > 
+                    <td valign="middle"  class="td_brCom"><div align="center">4</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">2011-04-08</div></td>
+                     <td valign="middle"  class="td_brCom"><div align="right">
+                   员工1
+                    </div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">622260071000800328123</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">100083284323</div></td>
+                   <td valign="middle"  class="td_brCom"><div align="center">
+             
+                   </td>
+                    <td valign="middle"  class="td_brCom"><div align="center">
+               4000
+              </td>
+                     <td valign="middle"  class="td_brCom"><div align="center">现金</td>               
+                   
+                    <td valign="middle"  class="td_brCom">公司开销
+                    <font color="blue" >&nbsp;
+                </font>
+                    </td>
+             		<td valign="middle"  class="td_brCom">
+                   <font color="#000000">
+                    <a href="bankAccountAssLine_edit.html">修 改</a>
+                    <a href="#">删 除</a> 
+                                    【<a href="bankAccountAssLineDetail_m.html">明细管理</a>】
+                   </font></td>
+                  </td>
+                  </tr>        
+                </table>
+		</td>
+      </tr>
+	   </table>
+        </form>
+		</td>
+        
+      </tr>
+    
+<tr>
+ 
+<td class="left_text" align="right"  >
+	<input id="condition" type="hidden" value="customerId=0&beginDate=0000-00-00&endDate=2011-09-16"/>共有<font color="red" id="total">1</font>页记录&nbsp;&nbsp;当前<font color="red" id="current">1</font>页&nbsp;&nbsp;<a href="javascript:goFirst()">首页</a>&nbsp;&nbsp;<a href="javascript:previous()">上一页</a> | <a  href="javascript:next()">下一页</a>&nbsp;&nbsp;<a href="javascript:goLast()">尾页</a>&nbsp;&nbsp;<select onchange="goPage(this)"><option selected value="1">第1页</option></select>
+</td>
+ 
+</tr>
+
+    </table>
+
+   
+</div>
+</body>
+</html>
+

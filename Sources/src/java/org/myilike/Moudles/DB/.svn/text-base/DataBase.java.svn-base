@@ -1,0 +1,48 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package org.myilike.Moudles.DB;
+
+import java.sql.*;
+import org.myilike.Moudles.Conf;
+
+/**
+ *
+ * @author Akers
+ */
+public class DataBase 
+{
+    private Connection con;
+	private Statement stmt;
+	private ResultSet rs;
+    private Conf conf;
+	//构造方法
+    public DataBase(){this(new Conf());}
+	public DataBase(Conf conf){this.conf = conf;}
+    
+	//执行查询
+	public ResultSet query(String sql){return rs;}
+    
+	//执行update delete操作
+	public int update(String sql){return 0;}
+    
+    //注销数据库连接
+	public void close()
+    {
+        try 
+        {
+            if(rs!=null)
+                rs.close();
+            if(stmt!=null)
+                stmt.close();
+            if(con!=null)
+                con.close();
+        } 
+        catch (SQLException e) 
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+	}
+}

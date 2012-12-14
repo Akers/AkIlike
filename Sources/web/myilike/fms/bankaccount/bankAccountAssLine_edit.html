@@ -1,0 +1,140 @@
+﻿<html>
+<head>
+<title></title>
+<link href="../../../css/styleform.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/stylemain.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/styletable.css" rel="stylesheet" type="text/css">
+<link href="../../../css/styletext.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="../../../js/My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body topmargin="20">
+
+<div align=center class="text">   
+<table width="600" height="369"  border="0" cellpadding="0" cellspacing="0" >
+
+  <tr>
+    <td width="100%" >
+	<div align="center" >
+          <p class="textTitle">修改账户明细记录</p> 
+        </div>	 
+     <hr color="#6FB7B7">	  </td>
+  </tr>
+
+  <tr>
+    <td height="345"  valign="top">
+<form name="form1" method="post" action="bankAccountAssLineServlet?having=modify_bankAccountAssLine_submit">
+          <table width="500"  border="0" cellpadding="2" cellspacing="0" bordercolor="#CCCCCC">           
+           <tr> 
+              <td height="32" class="text"><div align="right">选择账号:</div></td>
+              <td><label> 
+                <font color="blue" size="4">
+                <select name="bankAccountID">
+       <option value="0" selected>全部</option>          
+       <option value="1">62226007100080032008|BOSS1 </option>
+	<option value="2" >62226007100080032008D|BOSS2 </option>				
+	<option value="3" >  622260071000800328123|员工1 </option>
+ </select>
+                </font>
+                </label></td>
+            </tr>
+            </tr>
+            <input name="bankAccountAssLineID" id="bankAccountAssLineID" type="hidden"   value="1" />
+             <tr>
+          <td class="text"><div align="center" class="text">
+            <div align="right">交易日期:</div>
+          </div></td>
+          <td colspan="4" >
+            <input class="Wdate" type="text" onClick="WdatePicker()" name="bankAccountAssLineDate" value="2011-03-01"/></td></td>
+          </tr>
+             
+               <tr> 
+              <td height="32" class="text"><div align="right">金额:</div></td>
+              <td><label> 
+                <font color="blue" size="4"><input name="amount" id="amount" type="text"  size="45" value="1000000"  onblur="return amountCheck()"></font>
+                </label></td>
+            </tr>
+            </tr>
+            
+              <tr> 
+              <td height="32" class="text"><div align="right">账户流水线:</div></td>
+              <td><label> 
+                <font color="blue" size="4"><input name="bankAccountAssLineNum" type="text"  size="45"  value="1222222222"></font>
+                </label></td>
+            </tr>
+            </tr>
+            
+            
+              <tr> 
+              <td height="32" class="text"><div align="right">入账|支出:</div></td>
+              <td><label> 
+                <font color="blue" size="4">
+              <select name="isAccounted" class="list">
+                  <option value="0">支出</option>
+                  <option value="1" selected>入账</option>
+                </select>
+                </font>
+                </label></td>
+            </tr>
+            </tr>
+            
+              <tr> 
+              <td height="32" class="text"><div align="right">交易类型:</div></td>
+              <td><label> 
+                <font color="blue" size="4">
+                  <select name="isTransactionType" class="list">
+                  <option value="0"  >现金</option>
+                  <option value="1" selected>转账</option>
+                </select>
+                </font>
+                </label></td>
+            </tr>
+            </tr>
+             <tr>
+         <td class="text"><div align="right" class="text">客户:</div></td>
+          <td colspan="11" ><label>
+       <select name="customerID" class="list">  
+ 	 <option value="0"  ></option>         
+            <option value="1" selected  >客户1</option>
+ 	    <option value="2"  >客户2</option>
+ 	    <option value="3"  >客户3</option>
+             <option value="4" >KEHU1</option>
+             <option value="5"  >GOLRAND</option>
+        </select>
+          </label></td>
+		  </tr>
+		  <tr>
+         <td class="text"><div align="right" class="text">供应商:</div></td>
+          <td colspan="11" ><label>
+       	<select name="supplierID" class="list">
+		<option value="0" selected  ></option>
+         	<option value="1"   >供应商1</option>
+ 	    	<option value="2"   >供应商2</option>
+ 	    	<option value="3"  >供应商3</option>
+          </select>
+          </label></td>
+		  </tr>
+              <tr> 
+              <td  class="text"><div align="right">备注:</div></td>
+              <td><label> 
+                <font color="blue" size="4"><textArea name="bankAccountAssLineRemark" size="4" cols="45">3月支付总费用</textArea></font>
+                </label></td>
+            </tr>
+            </tr>
+            
+            <tr> 
+              <td height="61" colspan="2"><label> <div align="center"> 
+                  <input name="Submit" type="submit" class="buttonCom" value="  保  存  ">
+               <a href="bankAccountAssLine_m.html" class="buttonCom">  返    回   </a>
+                </div></label>
+                <label></label></td>
+            </tr>
+          </table>
+</form>	  </td>
+    </tr>
+
+  </table>
+<blockquote>&nbsp;</blockquote>
+</div>
+</body>
+</html>

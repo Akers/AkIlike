@@ -1,0 +1,67 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package org.myilike.Contortlors;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import org.myilike.Beans.*;
+import org.myilike.Moudles.AssLineActions;
+
+/**
+ *
+ * @author
+ * Administrator
+ */
+public class AssLineSeverlet extends HttpServlet
+{
+    private IlikeMessages msg;
+    private AssLine al;
+    private AssLineActions ala;
+    
+    public AssLineSeverlet(){ala = new AssLineActions();}
+    
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
+    {
+        this.doPost(req, resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    {
+        msg = new IlikeMessages(req, resp);
+        
+        
+        //判断是否正常访问
+        if(req.getSession().getAttribute("adminName") == null)
+            this.msg.illegalRequest();
+//            this.illegalRequest(req, resp);
+        //在帐号管理页面的“帐号明细”访问，根据参数aid取得帐号明细
+        if(req.getParameter("m").equals("baabbaid"));
+            this.showAssLineInfo(req, resp);
+    }
+    
+    
+    
+    //根据aid取得帐号明细
+     private void showAssLineInfo(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
+     {
+         String aid = req.getParameter("aid");
+         al = ala.getAssLine(Integer.parseInt(aid));
+         req.getSession().setAttribute("alInfo", al);
+         resp.sendRedirect("myilike/fms/bankaccount/bankAccountAssLineByBankAccountID_br.jsp");
+     }
+    
+    private void illegalRequest(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException 
+    {
+        IlikeMessages msg = new IlikeMessages();
+        msg.setMessage("sysMsg", "非法访问，可能是您未登录或者登录错误，请返回登录页面正常登录！！", "login.jsp", "登录页面", 3);
+        req.getSession().setAttribute("msg", msg);
+        resp.sendRedirect("msg.jsp");
+    }
+}

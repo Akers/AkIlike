@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json
+END
+XML.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/XML.java
+END
+JSONString.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/JSONString.java
+END
+JSONObject.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/JSONObject.java
+END
+JSONTokener.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/JSONTokener.java
+END
+JSONML.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/JSONML.java
+END
+CDL.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/CDL.java
+END
+CookieList.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/CookieList.java
+END
+JSONWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/JSONWriter.java
+END
+HTTPTokener.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/HTTPTokener.java
+END
+JSONArray.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/JSONArray.java
+END
+Cookie.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/Cookie.java
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/README
+END
+HTTP.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/HTTP.java
+END
+JSONStringer.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/JSONStringer.java
+END
+XMLTokener.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/XMLTokener.java
+END
+JSONException.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/akers/!svn/ver/165/5/src/java/org/myilike/utils/json/JSONException.java
+END

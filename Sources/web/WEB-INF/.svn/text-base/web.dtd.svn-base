@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/web.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE web-app SYSTEM "web.dtd">
+
+    <web-app>
+    ...
+    </web-app>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT web-app (welcome-file-list)*>
+<!ATTLIST web-app
+    version CDATA #IMPLIED
+    xsi:schemaLocation CDATA #IMPLIED
+    xmlns:xsi CDATA #IMPLIED
+    xmlns CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT welcome-file-list (welcome-file)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT welcome-file (#PCDATA)>

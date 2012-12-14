@@ -1,0 +1,159 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+
+<title>客户订单金额管理</title>
+<link href="../../../css/styleform.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/stylemain.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/styletable.css" rel="stylesheet" type="text/css">
+<link href="../../../css/styletext.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="../../../js/My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body topmargin="0">
+
+<div align=center> 
+  <p class="textTitle">客户订单金额管理</p> 
+<table width="99%"  border="0" cellpadding="0" cellspacing="0" >
+  <tr>
+    <td width="100%" >
+	<div align="center" >      
+      <form id="form3" name="form3" method="post" action="orderAmountServlet?action=display" >        
+        <p align="right" class="text">
+          <label>客户：</label>
+          <select name="customerID" class="list">  
+ 	 <option value="0"  >全部</option>         
+            <option value="1" selected  >客户1</option>
+ 	    <option value="2"  >客户2</option>
+ 	    <option value="3"  >客户3</option>
+             <option value="4" >KEHU1</option>
+             <option value="5"  >GOLRAND</option>
+        </select>
+              订货日期: 
+              <input class="wdate" type="text" onClick="WdatePicker()" name="beginDate" value="2011-01-01"/>
+           至
+           <input class="wdate" type="text" onClick="WdatePicker()" name="endDate" value="2011-09-01"/>
+           <input type="submit" name="Submit52" value="  查  询   " class="buttonCom" />
+      </form>
+        </div>	      
+	  </td>
+  </tr>
+  
+  <tr valign="top">
+    <td  valign="top">
+     <form  method="post" action="">
+    <table width="99%" height="98"  border="0" cellpadding="0" cellspacing="0"> 
+       
+      	<tr>
+        <td  colspan="4" valign="top">
+      
+		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"  style="border-collapse: collapse">
+                  <tr> 
+                    <th width="3%"valign="middle"  bgcolor="#eeeeee" class="th_brCom"><p>序号</p></th>
+                    <th  width="4%" height="30" valign="middle" bgcolor="#eeeeee" class="th_brCom"> <div align="center" >订单号</div></th>
+                    <th width="7%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">订货日期</th>
+                      <th width="6%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">交货日期</th>
+                      <th width="6%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">订单描述</th>                      
+                    <th width="6%"valign="middle"  bgcolor="#eeeeee" class="th_brCom"><div align="center">客户</div></th>
+                      <th width="7%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">应收金额</th>
+                    
+                    <th width="6%"valign="middle"  bgcolor="#eeeeee" class="th_brCom"><div align="center">供应商</div></th>
+              
+                    <th width="8%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">应付金额</th>
+                    <th width="8%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">实付金额</th>
+                    <th width="5%"valign="middle"  bgcolor="#eeeeee" class="th_brCom">毛利</th>
+                    <th width="10%" height="30" valign="middle"   bgcolor="#eeeeee" class="th_brCom"><div align="center" >操作</div></th>
+                  </tr>
+                                
+                  <tr > 
+                    <td valign="middle"  class="td_brCom"><div align="center">1</div></td>
+                      <td valign="middle" height="30"  class="td_brCom"> <div align="center" >GS</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">2011-01-01</div></td>
+                     <td valign="middle"  class="td_brCom"><div align="center">2011-12-30</div></td>
+                      <td valign="middle"  class="td_brCom"><div align="center">无</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">客户1</div></td>
+                   <td valign="middle"  class="td_brCom"><div align="right">
+				100,000
+					</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">供应商1</div></td>                   
+                    <td height="30" valign="middle"  class="td_brCom"><div align="right">
+                   98,000
+                    </div></td>
+                    <td valign="middle"  class="td_brCom"><div align="right">8,000
+                    </div></td>        
+                    <td valign="middle"  class="td_brCom"><div align="right">2,000</div></td>
+                    <td align="center" height="30"  valign="middle"  class="td_brCom">
+                      <a href="orderAmount_edit.html" > 修改</a> 
+                    <a href="orderAmountDetail_m.html" > 金额明细</a> 
+                   </td>
+                  </tr>        
+				  
+				   <tr > 
+                    <td valign="middle"  class="td_brCom"><div align="center">2</div></td>
+                      <td valign="middle" height="30"  class="td_brCom"> <div align="center" >zp11080802</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">2011-08-08</div></td>
+                     <td valign="middle"  class="td_brCom"><div align="center">2011-08-08</div></td>
+                      <td valign="middle"  class="td_brCom"><div align="center"></div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">客户2</div></td>
+                   <td valign="middle"  class="td_brCom"><div align="right">
+				3,500
+					</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">供应商1</div></td>                   
+                    <td height="30" valign="middle"  class="td_brCom"><div align="right">
+                 2,700
+                    </div></td>
+                    <td valign="middle"  class="td_brCom"><div align="right">700
+                    </div></td>        
+                    <td valign="middle"  class="td_brCom"><div align="right">800</div></td>
+                    <td align="center" height="30"  valign="middle"  class="td_brCom">
+                      <a href="orderAmount_edit.html" > 修改</a> 
+                        <a href="orderAmountDetail_m.html" > 金额明细</a> 
+                   </td>
+                  </tr>      
+				           
+						      <tr > 
+                    <td valign="middle"  class="td_brCom"><div align="center">3</div></td>
+                      <td valign="middle" height="30"  class="td_brCom"> <div align="center" >ZP11080801</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">2011-08-08</div></td>
+                     <td valign="middle"  class="td_brCom"><div align="center">2011-09-08</div></td>
+                      <td valign="middle"  class="td_brCom"><div align="center"></div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">客户1</div></td>
+                   <td valign="middle"  class="td_brCom"><div align="right">
+				26,400
+					</div></td>
+                    <td valign="middle"  class="td_brCom"><div align="center">供应商1</div></td>                   
+                    <td height="30" valign="middle"  class="td_brCom"><div align="right">
+               18,000
+                    </div></td>
+                    <td valign="middle"  class="td_brCom"><div align="right">  18,000
+                    </div></td>        
+                    <td valign="middle"  class="td_brCom"><div align="right">8,400</div></td>
+                    <td align="center" height="30"  valign="middle"  class="td_brCom">
+                      <a href="orderAmount_edit.html" > 修改</a> 
+                        <a href="orderAmountDetail_m.html" > 金额明细</a> 
+                   </td>
+                  </tr>    
+						   
+                </table>
+		</td>
+      </tr>
+	   </table>
+        </form>
+		</td>
+        
+      </tr>
+    
+	
+<tr> 
+<td class="left_text" align="right"  >
+	<input id="condition" type="hidden" value="beginDate=0000-00-00&endDate=2011-09-16"/>共有<font color="red" id="total">1</font>页记录&nbsp;&nbsp;当前<font color="red" id="current">1</font>页&nbsp;&nbsp;<a href="javascript:goFirst()">首页</a>&nbsp;&nbsp;<a href="javascript:previous()">上一页</a> | <a  href="javascript:next()">下一页</a>&nbsp;&nbsp;<a href="javascript:goLast()">尾页</a>&nbsp;&nbsp;<select onchange="goPage(this)"><option selected value="1">第1页</option></select>
+</td> 
+</tr>
+    </table>
+
+   
+</div>
+</body>
+</html>
+

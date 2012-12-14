@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/akers/!svn/ver/171/5/src/java/org/myilike/Moudles/DB
+END
+DataBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/akers/!svn/ver/171/5/src/java/org/myilike/Moudles/DB/DataBase.java
+END
+MySqlDB.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/akers/!svn/ver/171/5/src/java/org/myilike/Moudles/DB/MySqlDB.java
+END
+OdbcDB.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/akers/!svn/ver/171/5/src/java/org/myilike/Moudles/DB/OdbcDB.java
+END
